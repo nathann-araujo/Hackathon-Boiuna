@@ -1,0 +1,8 @@
+{
+  "name": "hackathon",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

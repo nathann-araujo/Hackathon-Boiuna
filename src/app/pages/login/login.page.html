@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-row></ion-row>
+  <form (ngSubmit)="realizarLogin()" [formGroup]="login">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-sm="8" size-xl="3" class="ion-align-self-end">
+        <ion-item>
+          <ion-label position="floating">CPF:</ion-label>
+          <ion-input ngDefaultControl formControlName="cpf" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-sm="8" size-xl="3" class="ion-align-self-end">
+        <ion-item>
+          <ion-label position="floating">Senha:</ion-label>
+          <ion-input ngDefaultControl formControlName="senha" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-sm="8" size-xl="3" class="ion-align-self-center">
+        <ion-button type=submit expand="full">Entrar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-sm="8" size-xl="3" class="ion-align-self-center">
+        <ion-button expand="full" (click)="presentModalR()">Registre-se</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

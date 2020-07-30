@@ -1,0 +1,157 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Acompanhamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form (ngSubmit)="enviarForm()" [formGroup]="formulario_acompanhamento">
+    <ion-item>
+      <ion-label position="floating">Dia</ion-label>
+      <ion-datetime ngDefaultControl formControlName="dia" pickerFormat="DD-MM-YYYY" placeholder="Selecione o dia"  displayFormat="DD/MM/YYYY"></ion-datetime>
+    </ion-item>
+    <ion-item-group>
+      <ion-row>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Febre</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="febre" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Fadiga</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="fadiga" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Tosse seca</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="tosse_seca" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Tosse persistente a mais de 2 ou 3 semanas</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="tosse_persistente" slot="start" color="primary">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Espirros</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="espirros" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Dores no corpo ou mal estar</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="dor_corpo" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Coriza ou nariz entupido</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="coriza" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Dor de garganta</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="dor_garganta" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Diarreia</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="diarreia" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Dor de cabeça</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="dor_cabeca" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Falta de ar</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="falta_ar" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Emagrecimento</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="emagrecimento" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Desidratação</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="desidratacao" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Perda de olfato</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="perda_olfato" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Perda de paladar</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="perda_paladar" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Falta de apetite</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="falta_apetite" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Vômito</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="vomito" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Síncope (Desmaio ou perda temporária de consciência)</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="sincope" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Confusão Mental</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="confusao_mental" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Sonolência excessiva</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="sonolencia_excessiva" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Irritabilidade</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="irritabilidade" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-xl="6">
+          <ion-item>
+            <ion-label class="ion-text-wrap">Sudorese noturna (transpiração)</ion-label>
+            <ion-checkbox ngDefaultControl formControlName="sudorese" slot="start" color="primary"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-item>
+        <ion-label>Outro:</ion-label>
+        <ion-input ngDefaultControl formControlName="outro"></ion-input>
+      </ion-item>
+    </ion-item-group>
+    <ion-button type="submit" expand="full" >Registrar</ion-button>
+  </form>
+</ion-content>

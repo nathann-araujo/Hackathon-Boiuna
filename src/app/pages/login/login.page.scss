@@ -1,0 +1,15 @@
+ion-row{
+    height: 35%;
+
+}
+ion-item{
+    --border-radius:10px;
+    --border-width:2px;
+    --highlight-height:0;
+}
+ion-item:focus-within{
+    --border-radius:10px;
+    --border-color:blue;
+    --border-width:2px;
+    --highlight-height:0;
+}

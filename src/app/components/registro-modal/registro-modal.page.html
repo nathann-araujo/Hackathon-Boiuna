@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="realizarRegistro()" [formGroup]="formulario_registro">
+    <ion-list>
+      <ion-item lines="full">
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input ngDefaultControl formControlName="nome" type="text"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">CPF</ion-label>
+        <ion-input ngDefaultControl formControlName="cpf" type="text"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Idade</ion-label>
+        <ion-input ngDefaultControl formControlName="idade" type="number"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Telefone</ion-label>
+        <ion-input ngDefaultControl formControlName="telefone" type="text"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Endereço</ion-label>
+        <ion-input ngDefaultControl formControlName="endereco" type="text"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input ngDefaultControl formControlName="email" type="text"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input ngDefaultControl formControlName="senha" type="text"></ion-input>
+      </ion-item>
+      <ion-item-divider>
+        <ion-label class="ion-text-wrap">1) Você se enquadra em uma das situações abaixo? Se sim, marque a(s) opção(ões) na qual você se enquadra. </ion-label>
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>Gestante</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="gestante_puerpera" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Asma</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="asma" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Diabetes</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="diabetes" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hipertensão</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="hipertensao" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Doenças Cardíacas</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="cardiaca" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Histórico de AVC</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="avc" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Histórico de Câncer</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="cancer" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Alzheimer</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="alzheimer" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Parkinson</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="parkinson" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label class="ion-text-wrap">DPOC (Doença Pulmonar Obstrutiva Crônica)</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="dpoc" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label class="ion-text-wrap">Fumante</ion-label>
+        <ion-checkbox ngDefaultControl formControlName="fumante" slot="start" color="primary"></ion-checkbox>
+      </ion-item>
+      
+    </ion-list>
+    <ion-button type="submit" expand="full" >Registrar</ion-button>
+  </form>
+</ion-content>

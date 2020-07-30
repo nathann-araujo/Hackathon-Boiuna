@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>agendamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngIf="escala=='leve'" class="ion-text-wrap">
+    Pelos sintomas apresentados a probabilidade que tenha COVID-19 é baixa, portanto não é necessário realizar o teste.
+  </ion-item>
+  <ion-item *ngIf="escala=='moderada'" class="ion-text-wrap">
+    Pelos sintomas apresentados a probabilidade que tenha COVID-19 é moderada, portanto é necessário realizar o exame, porém não é urgente, a partir
+    da data X poderá ser disponibilizado o exame, sujeito à alterações conforme prioridade
+  </ion-item>
+  <ion-item *ngIf="escala=='grave'" class="ion-text-wrap">
+    Pelos sintomas apresentados a probabilidade que tenha COVID-19 é alta, o seu exame está marcado para dia X
+  </ion-item>
+</ion-content>
