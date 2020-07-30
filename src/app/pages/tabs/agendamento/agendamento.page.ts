@@ -41,7 +41,7 @@ export class AgendamentoPage implements OnInit {
         if(this.grau <=10){
           this.escala = "leve"
         }
-        else if(this.grau <=150){
+        else if(this.grau <=90){
           this.escala = "moderada"
         }
         else{

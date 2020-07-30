@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { AcompanhamentoService } from 'src/app/services/acompanhamento.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-suspeita',
@@ -19,9 +20,9 @@ export class SuspeitaPage implements OnInit {
     true:true,
     false:false
   }
-  constructor(private formBuilder:FormBuilder, private teste:AcompanhamentoService) { 
+  constructor(private formBuilder:FormBuilder, private teste:AcompanhamentoService, private router:Router) { 
     this.formulario_suspeita = this.formBuilder.group({
-      dia : [null],
+      dia : ['2020-07-29'],
       febre : [false],
       fadiga : [false],
       tosse_seca : [false],
@@ -51,9 +52,11 @@ dados = { "nome":"Teste", "endereco":"lalalala"}
   ngOnInit() {
   }
   fazerRegistro(){
-    this.teste.enviarRelatorioS(this.dados).subscribe({
-      next:r=>{console.log("enviado")},
-      error:err=>{console.log("falhou")}
+    
+    this.teste.enviarRelatorioS(this.formulario_suspeita.value).subscribe({
+      next:r=>{console.log("enviado",r)
+      this.router.navigate(['/tabs/agendamento'])},
+      error:err=>{console.log("falhou")},
     })
   }
   enviarForm(){
